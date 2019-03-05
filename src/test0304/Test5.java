@@ -9,17 +9,17 @@ package test0304;
  * 매개변수 : String str, int length, int alignment
  *                                 (0 : 왼쪽 정렬, 1: 가운데 정렬, 2:오른쪽 정렬)
  [결과]
- 가나다    
-   가나다  
-      가나다
+가나다****    
+**가나다**  
+****가나다
 가나             
  */
 public class Test5 {
 	public static void main(String[] args) {
 		String str = "가나다";
-		System.out.println(format(str, 9, 0));
-		System.out.println(format(str, 9, 1));
-		System.out.println(format(str, 9, 2));
+		System.out.println(format(str, 7, 0));
+		System.out.println(format(str, 7, 1));
+		System.out.println(format(str, 7, 2));
 		System.out.println(format(str, 2, 0));
 	}
 
@@ -31,7 +31,8 @@ public class Test5 {
 		}
 		switch(alignment) {
 		case 0:sb.replace(0, str.length(), str);break;
-		case 1:sb.replace((length-str.length())/2, (length-str.length())/2+str.length(), str);break;
+		case 1:sb.replace((length-str.length())/2,(length-str.length())/2+str.length(),str);
+		       break;
 		case 2:sb.replace(length-str.length(), length, str);break;
 		}
 		return sb.toString();

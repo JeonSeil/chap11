@@ -40,11 +40,8 @@ class Point3D {
 		}
 		return false;
 	}
-
 	@Override
 	public String toString() {
 		return "["+x+","+y+","+z+"]";
-	}
-
-	
+	}	
 }

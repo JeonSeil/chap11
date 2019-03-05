@@ -18,21 +18,24 @@ public class Test1 {
  }
 }
 class SutdaCard {
-	private int number;
-	private boolean isKwang;
+	int number;
+	boolean isKwang;
 	public SutdaCard(int number, boolean isKwang) {
+		super();
 		this.number = number;
 		this.isKwang = isKwang;
-	}
-	public String toString() {
-		return number + ((isKwang)?"K":"");
 	}
 	@Override
 	public boolean equals(Object obj) {
 		if(obj instanceof SutdaCard) {
 			SutdaCard s = (SutdaCard)obj;
-			return number==s.number && isKwang==s.isKwang; 
+			return number==s.number&&isKwang==s.isKwang;
 		}
 		return false;
 	}
+	@Override
+	public String toString() {
+		return number + ((isKwang)?"K":"");
+	}
+	
 }
