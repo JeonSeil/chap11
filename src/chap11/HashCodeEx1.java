@@ -16,7 +16,7 @@ class Hash {
 	}
 	@Override
 	public int hashCode() {
-		return name.hashCode() + value;
+			return name.hashCode() + value;
 	}
 	@Override
 	public boolean equals(Object obj) {
